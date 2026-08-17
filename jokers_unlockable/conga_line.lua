@@ -8,6 +8,7 @@ SMODS.Joker {
   eternal_compat = true,
   perishable_compat = true,
   pos = RainyDays.GetJokersAtlasTable('conga_line'),
+  attributes = { 'retrigger', 'rank', 'ace', 'three', 'five', 'seven', 'nine' }, 
   config = {
     extra = {
       repetitions = 1

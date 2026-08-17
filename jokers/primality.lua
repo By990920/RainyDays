@@ -8,6 +8,7 @@ SMODS.Joker {
   eternal_compat = true,
   perishable_compat = true,
   pos = RainyDays.GetJokersAtlasTable('primality'),
+  attributes = { 'rank', 'modify_card', 'enhancements', 'seven', 'five', 'three', 'two' },
   pixel_size = { w = 70, h = 94 },
   
   loc_vars = function(self, info_queue, card)

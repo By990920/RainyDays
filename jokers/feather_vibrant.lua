@@ -12,6 +12,8 @@ if RainyDays.config.feathers then SMODS.Joker {
     return not RainyDays.FeatherOwned()
   end,
   pos = RainyDays.GetJokersAtlasTable('feather_vibrant'),
+  attributes = { 'chips' },
+  
   config = {
     extra = {
       plus_chips = 35

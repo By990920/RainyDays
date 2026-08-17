@@ -8,6 +8,7 @@ SMODS.Joker {
   eternal_compat = true,
   perishable_compat = true,
   pos = RainyDays.GetJokersAtlasTable('lady_in_waiting'),
+  attributes = { 'rank', 'queen', 'modify_card', 'chips', 'perma_bonus' },
   
   config = {
     extra = {

@@ -8,6 +8,7 @@ SMODS.Joker {
   eternal_compat = true,
   perishable_compat = true,
   pos = RainyDays.GetJokersAtlasTable('overflow'),
+  attributes = { 'hand_size', 'rank', 'ten', 'nine' },
   config = {
     extra = {
       hand_size_bonus = 1,

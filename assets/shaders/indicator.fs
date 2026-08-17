@@ -4,8 +4,6 @@
 	#define MY_HIGHP_OR_MEDIUMP mediump
 #endif
 
-extern MY_HIGHP_OR_MEDIUMP vec2 indicator;
-
 extern MY_HIGHP_OR_MEDIUMP number dissolve;
 extern MY_HIGHP_OR_MEDIUMP number time;
 extern MY_HIGHP_OR_MEDIUMP vec4 texture_details;
@@ -76,7 +74,6 @@ vec4 effect( vec4 colour, Image texture, vec2 texture_coords, vec2 screen_coords
             		tex.rgb = tex.rgb * (1. - 0.6 * dissolve) + 0.6 * burn_colour_1.rgb * dissolve;
         	}
     	}
-	float a = indicator.r * 0.5;
 
 	vec2 pixel = uv * texture_details.ba;
 	vec2 tile = floor((pixel - grid_origin) / sphere_size);

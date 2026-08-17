@@ -7,7 +7,9 @@ SMODS.Joker {
   blueprint_compat = true,
   eternal_compat = true,
   perishable_compat = true,
-  pos = RainyDays.GetJokersAtlasTable('delirium_alt0'), 
+  pos = RainyDays.GetJokersAtlasTable('delirium_alt0'),
+  attributes = { 'mult', 'discard', 'suit' },
+  
   config = {
     extra = {
       mult_bonus = 20,

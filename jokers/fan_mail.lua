@@ -8,6 +8,8 @@ SMODS.Joker {
   eternal_compat = true,
   perishable_compat = true,
   pos = RainyDays.GetJokersAtlasTable('fan_mail'),
+  attributes = { 'passive' },
+  
   config = {
     extra = {
       packs = 1

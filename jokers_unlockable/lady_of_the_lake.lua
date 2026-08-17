@@ -11,6 +11,7 @@ SMODS.Joker {
   soul_pos = RainyDays.GetJokersAtlasTable('lady_of_the_lake_soul'),
   RD_soul_draw_as_highlight = true,
   RD_soul_draw_as_highlight_shader = 'RainyDays_metallic_highlight',
+  attributes = { 'enhancements', 'modify_card' },
 
   calculate = function (self, card, context)
     if context.before and context.main_eval then

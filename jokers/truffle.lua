@@ -9,6 +9,7 @@ SMODS.Joker {
   eternal_compat = false,
   perishable_compat = true,
   pos = RainyDays.GetJokersAtlasTable('truffle'),
+  attributes = { 'xmult', 'food' },
   config = {
     extra = {
       xmult_amount = 3,

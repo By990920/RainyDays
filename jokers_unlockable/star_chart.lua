@@ -11,6 +11,7 @@ SMODS.Joker {
   soul_pos = RainyDays.GetJokersAtlasTable('star_chart_soul'),
   RD_soul_draw_as_highlight = true,
   RD_soul_draw_as_highlight_shader = 'RainyDays_metallic_highlight',
+  attributes = { 'chips', 'scaling', 'planet', 'space' },
   
   config = {
     extra = {

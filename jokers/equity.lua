@@ -9,6 +9,7 @@ SMODS.Joker {
   perishable_compat = true,
   pos = RainyDays.GetJokersAtlasTable('equity'),
   pixel_size = { w = 71, h = 94 },
+  attributes = { 'mult', 'hand_type' },
   
   config = {
     extra = {

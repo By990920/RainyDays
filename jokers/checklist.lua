@@ -12,6 +12,7 @@ SMODS.Joker {
   RD_soul_draw_as_highlight = true,
   RD_soul_draw_as_highlight_shader = 'RainyDays_indicator_ranks',
   RD_soul_draw_always = true,
+  attributes = { 'rank', 'xmult' },
   
   config = {
     extra = {

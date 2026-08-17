@@ -8,6 +8,7 @@ SMODS.Joker {
   eternal_compat = true,
   perishable_compat = true,
   pos = RainyDays.GetJokersAtlasTable('theater'),
+  attributes = { 'mult', 'passive', 'face' },
   
   config = {
     sort = false,

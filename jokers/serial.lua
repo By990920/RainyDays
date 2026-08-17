@@ -8,6 +8,7 @@ SMODS.Joker {
   eternal_compat = true,
   perishable_compat = true,
   pos = RainyDays.GetJokersAtlasTable('serial'),
+  attributes = { 'chips', 'suit' },  
   config = {
     extra = {
       chips = 40,

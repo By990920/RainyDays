@@ -8,6 +8,7 @@ SMODS.Joker {
   eternal_compat = true,
   perishable_compat = false,
   pos = RainyDays.GetJokersAtlasTable('hannysvoorwerp'),
+  attributes = { 'mult', 'scaling', 'planet', 'space' },
   config = {
     extra = {
       current_mult = 0,

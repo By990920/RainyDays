@@ -10,6 +10,7 @@ SMODS.Joker {
   pos = RainyDays.GetJokersAtlasTable('slashed_joker'),
   soul_pos = RainyDays.GetJokersAtlasTable('slashed_joker_soul'),
   RD_soul_draw_edition = true,
+  attributes = { 'retrigger' }, 
   
   config = {
     extra = {

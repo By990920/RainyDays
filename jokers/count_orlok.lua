@@ -8,6 +8,7 @@ SMODS.Joker {
   eternal_compat = true,
   perishable_compat = false,
   pos = RainyDays.GetJokersAtlasTable('count_orlok'),
+  attributes = { 'xmult', 'face', 'destroy_card', 'scaling' },
   
   config = {
     extra = {

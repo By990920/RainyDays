@@ -18,6 +18,7 @@ SMODS.Joker {
     return false
   end,
   pos = RainyDays.GetJokersAtlasTable('golden_idol'),
+  attributes = { 'xmult', 'scaling', 'enhancements' },
   
   config = {
     extra = {

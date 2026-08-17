@@ -18,6 +18,8 @@ SMODS.Joker {
     return false
   end,
   pos = RainyDays.GetJokersAtlasTable('dancing_moves'),
+  attributes = { 'retrigger', 'enhancements' },
+  
   config = {
     extra = {
       repetitions = 1

@@ -8,6 +8,7 @@ SMODS.Joker {
   eternal_compat = true,
   perishable_compat = true,
   pos = RainyDays.GetJokersAtlasTable('bankaccount'),
+  attributes = { 'chips', 'sell_value' },
   config = {
     extra = {
       plus_chips = 70,

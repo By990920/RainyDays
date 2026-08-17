@@ -8,6 +8,7 @@ SMODS.Joker {
   eternal_compat = true,
   perishable_compat = true,
   pos = RainyDays.GetJokersAtlasTable('roller_skates'),
+  attributes = { 'xmult', 'discard', 'hand_type' },   
   
   config = {
     extra = {

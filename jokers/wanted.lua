@@ -8,6 +8,7 @@ SMODS.Joker {
   eternal_compat = true,
   perishable_compat = true,
   pos = RainyDays.GetJokersAtlasTable('wanted'),
+  attributes = { 'economy' },  
   config = {
     extra = {
       reward_money = 12

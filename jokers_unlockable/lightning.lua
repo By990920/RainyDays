@@ -18,6 +18,7 @@ SMODS.Joker {
     return false
   end,
   pos = RainyDays.GetJokersAtlasTable('lightning'),
+  attributes = { 'xmult', 'enhancements', 'passive' },   
   
   config = {
     extra = {

@@ -8,6 +8,7 @@ SMODS.Joker {
   eternal_compat = true,
   perishable_compat = true,
   pos = RainyDays.GetJokersAtlasTable('membership_card'),
+  attributes = { 'passsive', 'economy' },
   config = {
     extra = {
       cost_reduction = 1

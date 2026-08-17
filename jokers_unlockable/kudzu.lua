@@ -8,6 +8,7 @@ SMODS.Joker {
   eternal_compat = true,
   perishable_compat = false,
   pos = RainyDays.GetJokersAtlasTable('kudzu'), 
+  attributes = { 'mult', 'scaling', 'generation' }, 
   config = {
     extra = {
       mult_bonus = 1,

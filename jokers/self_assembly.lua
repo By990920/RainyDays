@@ -8,6 +8,7 @@ SMODS.Joker {
   eternal_compat = true,
   perishable_compat = false,
   pos = RainyDays.GetJokersAtlasTable('self_assembly'),
+  attributes = { 'scaling', 'mult', 'enhancements' },
   config = {
     extra = {
       mult = 0,

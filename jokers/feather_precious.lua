@@ -12,6 +12,8 @@ if RainyDays.config.feathers then SMODS.Joker {
     return not RainyDays.FeatherOwned()
   end,
   pos = RainyDays.GetJokersAtlasTable('feather_precious'),
+  attributes = { 'economy' },
+  
   config = {
     extra = {
       plus_money = 3

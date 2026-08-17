@@ -8,6 +8,7 @@ SMODS.Joker {
   eternal_compat = true,
   perishable_compat = true,
   pos = RainyDays.GetJokersAtlasTable('purple_card'),
+  attributes = { 'tarot', 'generation' },
   
   calculate = function(self, card, context)      
     if context.skipping_booster then

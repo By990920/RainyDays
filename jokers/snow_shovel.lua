@@ -8,6 +8,7 @@ SMODS.Joker {
   eternal_compat = true,
   perishable_compat = false,
   pos = RainyDays.GetJokersAtlasTable('snow_shovel'),
+  attributes = { 'chips', 'scaling', 'suit', 'spades' },
   
   config = {
     extra = {

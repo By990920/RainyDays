@@ -8,6 +8,7 @@ SMODS.Joker {
   eternal_compat = true,
   perishable_compat = false,
   pos = RainyDays.GetJokersAtlasTable('beanstalk'),
+  attributes = { 'xmult', 'scaling', 'reset' },
   
   config = {
     extra = {

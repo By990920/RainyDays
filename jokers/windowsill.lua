@@ -8,6 +8,7 @@ SMODS.Joker {
   eternal_compat = true,
   perishable_compat = true,
   pos = RainyDays.GetJokersAtlasTable('windowsill'),
+  attributes = { 'planet', 'generation', 'suit', 'diamonds' },
   
   config = {
     extra = {

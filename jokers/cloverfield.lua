@@ -8,6 +8,8 @@ SMODS.Joker {
   eternal_compat = true,
   perishable_compat = false,
   pos = RainyDays.GetJokersAtlasTable('cloverfield'),
+  attributes = { 'mult', 'discard', 'scaling', 'suits', 'clubs' },
+  
   config = {
     extra = {
       current_mult = 0,

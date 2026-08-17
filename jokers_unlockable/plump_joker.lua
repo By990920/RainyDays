@@ -9,6 +9,7 @@ SMODS.Joker {
   perishable_compat = true,
   pos = { x = 0, y = 0 },
   display_size = { w = 80, h = 95 },
+  attributes = { 'mult', 'scaling', 'reset', 'boss_blind' },
   
   config = {
     extra = {

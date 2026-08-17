@@ -18,6 +18,7 @@ SMODS.Joker {
     return false
   end,
   pos = RainyDays.GetJokersAtlasTable('mirror_lake'),
+  attributes = { 'tarot', 'generation', 'enhancements' },
     
   loc_vars = function(self, info_queue, card)
     info_queue[#info_queue + 1] = G.P_CENTERS.m_glass

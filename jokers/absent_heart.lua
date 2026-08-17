@@ -8,6 +8,7 @@ SMODS.Joker {
   eternal_compat = true,
   perishable_compat = true,
   pos = RainyDays.GetJokersAtlasTable('absent_heart'),
+  attributes = { 'tarot', 'generation', 'suit', 'hearts' },
   config = {
     extra = {
       per_not_scored = 7,

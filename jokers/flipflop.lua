@@ -8,6 +8,8 @@ SMODS.Joker {
   eternal_compat = true,
   perishable_compat = true,
   pos = RainyDays.GetJokersAtlasTable('flipflop_even'),
+  attributes = { 'chips', 'xmult' },
+  
   config = {
     extra = {
       plus_xmult = 2,

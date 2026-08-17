@@ -8,6 +8,7 @@ SMODS.Joker {
   eternal_compat = true,
   perishable_compat = true,
   pos = RainyDays.GetJokersAtlasTable('joker_reject'),
+  attributes = { 'passive', 'discard' }, 
   
   config = {
     extra = {
@@ -50,9 +51,11 @@ SMODS.Joker {
 local old_func_can_discard = G.FUNCS.can_discard
 function G.FUNCS.can_discard(e)
   local ret = old_func_can_discard(e)
-  if not e.config.button and G.GAME.rd_discard_for_money and G.GAME.rd_discard_for_money > 0 and G.GAME.dollars >= to_big(G.GAME.rd_discard_for_money_amount) then
-    e.config.colour = G.C.RED
-    e.config.button = 'discard_cards_from_highlighted'
+  if not e.config.button and G.GAME.rd_discard_for_money and G.GAME.rd_discard_for_money > 0 then
+    if to_number(G.GAME.dollars) - G.GAME.rd_discard_for_money_amount >= G.GAME.bankrupt_at then
+      e.config.colour = G.C.RED
+      e.config.button = 'discard_cards_from_highlighted'
+    end
   end
   return ret
 end

@@ -9,6 +9,7 @@ SMODS.Joker {
   eternal_compat = false,
   perishable_compat = false,
   pos = RainyDays.GetJokersAtlasTable('breakfast_cereal'),
+  attributes = { 'retrigger', 'enhancements', 'tag' }, 
   config = {
     extra = {
       cards_amount = 12,

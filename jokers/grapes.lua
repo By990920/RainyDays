@@ -9,6 +9,8 @@ SMODS.Joker {
   eternal_compat = false,
   perishable_compat = true,
   pos = RainyDays.GetJokersAtlasTable('grapes'),
+  attributes = { 'mult', 'food' },
+  
   config = {
     extra = {
       card_amount = 30,

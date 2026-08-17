@@ -12,6 +12,7 @@ SMODS.Joker {
   RD_soul_draw_as_highlight = true,
   RD_soul_draw_as_highlight_shader = 'RainyDays_indicator',
   RD_soul_draw_always = true,
+  attributes = { 'xmult', 'scaling', 'reset' }, 
   
   config = {
     extra = {
@@ -21,9 +22,11 @@ SMODS.Joker {
   
   loc_vars = function(self, info_queue, card)
     local count = 0
-    for _, value in ipairs(G.handlist) do
-       if G.GAME.hands[value].played_this_round > 0 then
-        count = count + 1
+    if G.GAME.blind and G.GAME.blind.in_blind then 
+      for _, value in ipairs(G.handlist) do
+         if G.GAME.hands[value].played_this_round > 0 then
+          count = count + 1
+        end
       end
     end
     

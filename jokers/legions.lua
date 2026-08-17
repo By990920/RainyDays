@@ -8,6 +8,7 @@ SMODS.Joker {
   eternal_compat = true,
   perishable_compat = true,
   pos = RainyDays.GetJokersAtlasTable('legions'),
+  attributes = { 'mult' },
   
   calculate = function(self, card, context)    
     if context.individual and context.cardarea == G.play then

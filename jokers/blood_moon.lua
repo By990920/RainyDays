@@ -8,6 +8,7 @@ SMODS.Joker {
   eternal_compat = true,
   perishable_compat = true,
   pos = RainyDays.GetJokersAtlasTable('blood_moon'),
+  attributes = { 'xmult', 'destroy_card' },
   
   config = {
     extra = {

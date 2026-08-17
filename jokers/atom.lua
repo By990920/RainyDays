@@ -8,6 +8,7 @@ SMODS.Joker {
   eternal_compat = true,
   perishable_compat = true,
   pos = RainyDays.GetJokersAtlasTable('atom'),
+  attributes = { 'mult', 'rank', 'ace', 'chance', 'hand_type' },
   config = {
     extra = {
       rank = 'Ace',

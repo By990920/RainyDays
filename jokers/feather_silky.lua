@@ -12,6 +12,8 @@ if RainyDays.config.feathers then SMODS.Joker {
     return not RainyDays.FeatherOwned()
   end,
   pos = RainyDays.GetJokersAtlasTable('feather_silky'),
+  attributes = { 'mult' },
+  
   config = {
     extra = {
       plus_mult = 6

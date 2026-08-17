@@ -8,6 +8,7 @@ SMODS.Joker {
   eternal_compat = true,
   perishable_compat = true,
   pos = RainyDays.GetJokersAtlasTable('recycle'),
+  attributes = { 'rank', 'mult', 'modify_card', 'perma_bonus', 'five', 'four', 'three', 'two' },
   config = {
     extra = {
       bonus_mult = 2

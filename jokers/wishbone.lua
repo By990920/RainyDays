@@ -8,6 +8,7 @@ SMODS.Joker {
   eternal_compat = false,
   perishable_compat = true,
   pos = RainyDays.GetJokersAtlasTable('wishbone'),
+  attributes = { 'chips', 'generation', 'tarot', 'on_sell' },
   config = {
     extra = {
       chips = 50

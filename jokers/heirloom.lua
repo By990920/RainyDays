@@ -18,6 +18,7 @@ SMODS.Joker {
     return false
   end,
   pos = RainyDays.GetJokersAtlasTable('heirloom'),
+  attributes = { 'enhancements', 'chance', 'modify_card' },
   
   config = {
     extra = {

@@ -11,6 +11,7 @@ SMODS.Joker {
   soul_pos = RainyDays.GetJokersAtlasTable('waveform_soul'),
   RD_soul_draw_as_highlight = true,
   RD_soul_draw_as_highlight_shader = 'RainyDays_false_glow',
+  attributes = { 'mult', 'retrigger', 'chance' },
   
   config = {
     extra = {

@@ -8,6 +8,7 @@ SMODS.Joker {
   eternal_compat = true,
   perishable_compat = true,
   pos = RainyDays.GetJokersAtlasTable('skinner_box'),
+  attributes = { 'sell_value', 'economy' },
   
   config = {
     extra = {

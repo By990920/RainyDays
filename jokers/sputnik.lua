@@ -12,11 +12,8 @@ SMODS.Joker {
   RD_soul_draw_as_highlight = true,
   RD_soul_draw_as_highlight_shader = 'RainyDays_indicator',
   RD_soul_draw_always = true,
+  attributes = { 'planet', 'generation', 'hand_type', 'space', 'boss_blind' },
   
-  config = {
-    juicing = false
-  },
-
   calculate = function(self, card, context)
     if context.joker_main and G.GAME.hands[context.scoring_name].played_this_ante == 1 then
       if RainyDays.Constellations then

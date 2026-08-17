@@ -8,6 +8,7 @@ SMODS.Joker {
   eternal_compat = true,
   perishable_compat = true,
   pos = RainyDays.GetJokersAtlasTable('bonsai'),
+  attributes = { 'mult', 'suit', 'clubs' }, 
   
   config = {
     extra = {

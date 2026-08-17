@@ -4,7 +4,6 @@
 	#define MY_HIGHP_OR_MEDIUMP mediump
 #endif
 
-extern MY_HIGHP_OR_MEDIUMP vec2 false_glow;
 extern MY_HIGHP_OR_MEDIUMP number dissolve;
 extern MY_HIGHP_OR_MEDIUMP number time;
 extern MY_HIGHP_OR_MEDIUMP vec4 texture_details;
@@ -65,7 +64,7 @@ vec4 effect( vec4 colour, Image texture, vec2 texture_coords, vec2 screen_coords
             		tex.rgb = tex.rgb*(1.-0.6*dissolve) + 0.6*burn_colour_1.rgb*dissolve;
         	}
     	}
-	tex.a = tex.a * (0.02 * (0.0001 * false_glow.r + tex.a * (sin(timer) + sin(6.28))));
+	tex.a = tex.a * (0.02 * (tex.a * (sin(timer) + sin(6.28))));
     	return dissolve_mask(tex, texture_coords, uv);
 }
 

@@ -8,6 +8,7 @@ SMODS.Joker {
   eternal_compat = true,
   perishable_compat = true,
   pos = RainyDays.GetJokersAtlasTable('long_road'), 
+  attributes = { 'hand_type', 'discard' },
   config = {
     extra = {
       discard_bonus = 2,

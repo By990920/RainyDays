@@ -6,7 +6,11 @@ SMODS.DrawStep {
     if self.config.center.RD_soul_draw_as_highlight and (self.config.center.discovered or self.bypass_discovery_center) then
       if self.config.center.RD_soul_draw_always or RainyDays.config.metallic_hightlights then
         RainyDays.card_drawn = self
-        self.children.floating_sprite:draw_shader(self.config.center.RD_soul_draw_as_highlight_shader, nil, self.ARGS.send_to_shader, nil, self.children.center, 0, 0)
+        if self.config.center.RD_soul_draw_as_highlight_shader == 'RainyDays_metallic_highlight' then
+          self.children.floating_sprite:draw_shader(self.config.center.RD_soul_draw_as_highlight_shader, nil, self.ARGS.send_to_shader, nil, self.children.center, 0, 0)
+        else
+          self.children.floating_sprite:draw_shader(self.config.center.RD_soul_draw_as_highlight_shader, nil, nil, nil, self.children.center, 0, 0)
+        end
         RainyDays.card_drawn = nil
       end
     end

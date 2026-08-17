@@ -8,6 +8,7 @@ SMODS.Joker {
   eternal_compat = true,
   perishable_compat = false,
   pos = RainyDays.GetJokersAtlasTable('train_ticket'),
+  attributes = { 'mult', 'scaling' },
   
   config = {
     extra = {
