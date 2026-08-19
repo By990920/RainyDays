@@ -1,6 +1,6 @@
 SMODS.DrawStep {
   key = 'RD_draw_soul_as_hightlights',
-  order = 5,
+  order = 25,
   conditions = { vortex = false, facing = 'front' },
   func = function(self, layer)
     if self.config.center.RD_soul_draw_as_highlight and (self.config.center.discovered or self.bypass_discovery_center) then
