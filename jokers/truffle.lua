@@ -34,9 +34,17 @@ SMODS.Joker {
     end
     
     if context.end_of_round and context.game_over == false and not context.repetition and not context.individual and not context.blueprint then
-      local decrease = card.ability.extra.xmult_decrease * #G.deck.cards
-      if decrease > 0 then
-        card.ability.extra.xmult_amount = card.ability.extra.xmult_amount - decrease
+      if #G.deck.cards > 0 then
+        local before = card.ability.extra.xmult_amount
+        SMODS.scale_card(card, {
+          ref_table = card.ability.extra, 
+          ref_value = 'xmult_amount',
+          scalar_value = 'xmult_decrease',
+          operation = function(ref_table, ref_value, initial, modifier)
+            ref_table[ref_value] = initial - modifier * #G.deck.cards
+          end,
+          no_message = true
+        })
         if card.ability.extra.xmult_amount <= 1 then
           SMODS.destroy_cards(card, nil, nil, true)
           return {
@@ -45,7 +53,7 @@ SMODS.Joker {
           }
         else 
           return {
-            message = localize { type = 'variable', key = 'a_xmult_minus', vars = { decrease }},
+            message = localize { type = 'variable', key = 'a_xmult_minus', vars = { math.abs(before - card.ability.extra.xmult_amount) }},
             colour = G.C.MULT
           }
         end

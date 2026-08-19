@@ -34,7 +34,14 @@ SMODS.Joker {
     end
     
     if context.open_booster and not context.blueprint then
-      card.ability.extra.mult = card.ability.extra.mult - card.ability.extra.malus_mult
+      local before = card.ability.extra.mult
+      SMODS.scale_card(card, {
+        ref_table = card.ability.extra, 
+        ref_value = 'mult',
+        scalar_value = 'malus_mult',
+        operation = '-',
+        no_message = true
+      })
       if card.ability.extra.mult <= 0 then
         SMODS.destroy_cards(card, nil, nil, true)
         return {
@@ -43,7 +50,7 @@ SMODS.Joker {
         }
       else 
         return {
-          message = localize { type = 'variable', key = 'a_mult_minus', vars = { card.ability.extra.malus_mult }},
+          message = localize { type = 'variable', key = 'a_mult_minus', vars = { math.abs(before - card.ability.extra.mult) }},
           colour = G.C.MULT
         }
       end

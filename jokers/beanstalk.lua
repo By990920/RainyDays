@@ -53,12 +53,12 @@ SMODS.Joker {
     if context.using_consumeable and card.ability.extra.cards_used_this_round < card.ability.extra.card_amount and not context.blueprint then
       card.ability.extra.cards_used_this_round = card.ability.extra.cards_used_this_round + 1
       if card.ability.extra.cards_used_this_round >= card.ability.extra.card_amount then
-        card.ability.extra.xmult = card.ability.extra.xmult + card.ability.extra.xmult_gain
-        return { 
-          message_card = card,
-          message = localize('k_upgrade_ex'),
-          colour = G.C.MULT
-        }
+        SMODS.scale_card(card, {
+          ref_table = card.ability.extra,
+          ref_value = 'xmult',
+          scalar_value = 'xmult_gain',
+          scaling_message = { message = localize('k_upgrade_ex'), message_card = card, colour = G.C.MULT }
+        })
       else
         local amount = card.ability.extra.card_amount - card.ability.extra.cards_used_this_round
         return { 

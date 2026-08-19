@@ -41,19 +41,22 @@ SMODS.Joker {
     if context.individual and context.cardarea == G.play and context.other_card:is_suit('Spades') and not context.blueprint then
       card.ability.extra.scored_counter = card.ability.extra.scored_counter + 1
       
-      local upgraded = false
+      local upgraded = 0
       while card.ability.extra.scored_counter >= card.ability.extra.per_scored do
-        card.ability.extra.chip_current = card.ability.extra.chip_current + card.ability.extra.chip_bonus
+        upgraded = upgraded + 1
         card.ability.extra.scored_counter = card.ability.extra.scored_counter - card.ability.extra.per_scored
-        upgraded = true
       end
       
-      if upgraded then
-        return {
-          message_card = card,
-          message = localize('k_upgrade_ex'),
-          colour = G.C.CHIPS
-        }
+      if upgraded > 0 then
+        SMODS.scale_card(card, {
+          ref_table = card.ability.extra, 
+          ref_value = 'chip_current',
+          scalar_value = 'chip_bonus',
+          operation = function(ref_table, ref_value, initial, modifier)
+            ref_table[ref_value] = initial + modifier * upgraded
+          end,
+          scaling_message = { message = localize('k_upgrade_ex'), message_card = card, colour = G.C.CHIPS }
+        })
       end
     end
   end

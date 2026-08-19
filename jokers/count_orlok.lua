@@ -46,11 +46,12 @@ SMODS.Joker {
       
       if #face_cards >= card.ability.extra.face_cards then
         card.ability.extra.card_to_destroy = pseudorandom_element(face_cards, pseudoseed('orlok'))
-        card.ability.extra.xmult = card.ability.extra.xmult + card.ability.extra.xmult_gain
-        return {
-          message = localize('k_upgrade_ex'),
-          colour = G.C.MULT
-        }
+        SMODS.scale_card(card, {
+          ref_table = card.ability.extra,
+          ref_value = 'xmult',
+          scalar_value = 'xmult_gain',
+          scaling_message = { message = localize('k_upgrade_ex'), colour = G.C.MULT }
+        })
       end
     end
     

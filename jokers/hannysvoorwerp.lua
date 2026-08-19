@@ -35,12 +35,12 @@ SMODS.Joker {
     
     if context.selling_card and not context.blueprint then
       if context.card.ability.set == 'Planet' or (RainyDays.Constellations and context.card.ability.set == 'CN_Constellation') then
-        card.ability.extra.current_mult = card.ability.extra.current_mult + card.ability.extra.plus_mult
-        return {
-          message_card = card,
-          message = localize('k_upgrade_ex'),
-          colour = G.C.MULT
-        }
+        SMODS.scale_card(card, {
+          ref_table = card.ability.extra,
+          ref_value = 'current_mult',
+          scalar_value = 'plus_mult',
+          scaling_message = { message = localize('k_upgrade_ex'), message_card = card, colour = G.C.MULT }
+        })
       end
     end
   end

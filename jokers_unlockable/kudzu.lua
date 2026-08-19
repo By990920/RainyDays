@@ -41,9 +41,16 @@ SMODS.Joker {
           end
           
           local count = #SMODS.find_card('j_RainyDays_kudzu')
-          if count > 0 then 
-            card.ability.extra.mult_current = card.ability.extra.mult_current + count
-            card_eval_status_text(card, 'jokers', nil, nil, nil, { message = localize('k_upgrade_ex'), colour = G.C.MULT })
+          if count > 1 then 
+            SMODS.scale_card(card, {
+              ref_table = card.ability.extra,
+              ref_value = 'mult_current',
+              scalar_value = 'mult_bonus',
+              operation = function(ref_table, ref_value, initial, modifier)
+                ref_table[ref_value] = initial + modifier * (count - 1)
+              end,
+              scaling_message = { message = localize('k_upgrade_ex'), colour = G.C.MULT }
+            })
           end
           return true
         end

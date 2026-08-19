@@ -35,11 +35,12 @@ SMODS.Joker {
     end
     
     if context.before and context.scoring_name ~= G.GAME.current_round.RD_prairie_poker_hand and not context.blueprint then
-      card.ability.extra.current_mult = card.ability.extra.current_mult + card.ability.extra.mult_gain
-      return {
-        message = localize('k_upgrade_ex'),
-        colour = G.C.RED
-      }
+      SMODS.scale_card(card, {
+        ref_table = card.ability.extra,
+        ref_value = 'current_mult',
+        scalar_value = 'mult_gain',
+        scaling_message = { message = localize('k_upgrade_ex'), colour = G.C.MULT }
+      })
     end
   end
 }

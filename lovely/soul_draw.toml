@@ -28,3 +28,19 @@ match_indent = true
 pattern = '''if self.config.center.soul_pos and (self.config.center.discovered or self.bypass_discovery_center) then'''
 position = 'after'
 payload = '''if self.config.center.RD_soul_draw_as_highlight then return end'''
+
+
+
+#draw canvas text with negative edition
+[[patches]]
+[patches.pattern]
+target = '''=[SMODS _ "src/card_draw.lua"]'''
+match_indent = true
+pattern = '''sprite:draw_shader('dissolve', nil, nil, nil, self.children.center)'''
+position = 'at'
+payload = '''local edition = self.delay_edition or self.edition
+if self.config.center.RD_canvas_text_edition and edition and edition.negative then
+	sprite:draw_shader('negative', nil, nil, nil, self.children.center)
+else
+	sprite:draw_shader('dissolve', nil, nil, nil, self.children.center)
+end'''

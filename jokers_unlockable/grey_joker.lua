@@ -38,11 +38,12 @@ SMODS.Joker {
     if context.pre_discard and not context.blueprint then
       local _, _, hands_discarded = G.FUNCS.get_poker_hand_info(G.hand.highlighted)
       if next(hands_discarded[card.ability.extra.hand]) then
-        card.ability.extra.xmult = card.ability.extra.xmult + card.ability.extra.xmult_gain
-        return {
-          message = localize('k_upgrade_ex'),
-          colour = G.C.RED
-        }
+        SMODS.scale_card(card, {
+          ref_table = card.ability.extra,
+          ref_value = 'xmult',
+          scalar_value = 'xmult_gain',
+          scaling_message = { message = localize('k_upgrade_ex'), colour = G.C.MULT }
+        })
       end
     end
   end,

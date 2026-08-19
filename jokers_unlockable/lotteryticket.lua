@@ -8,6 +8,7 @@ SMODS.Joker {
   eternal_compat = true,
   perishable_compat = true,
   pos = RainyDays.GetJokersAtlasTable('lotteryticket'),
+  RD_canvas_text_edition = true,
   attributes = { 'economy' },
   config = {
     extra = {

@@ -29,20 +29,14 @@ SMODS.Joker {
       end
     end
     
-    local string = count >= card.ability.extra.hands and localize('rainydays_activated') or (card.ability.extra.hands - count) .. ' ' .. localize('rainydays_more')
-    local colour = count >= card.ability.extra.hands and G.C.FILTER or G.C.UI.TEXT_INACTIVE
-    
-    local main_end = {
-      { n = G.UIT.T, config = { text = '(', colour = G.C.UI.TEXT_INACTIVE, scale = 0.32 }},
-      { n = G.UIT.T, config = { text = string, colour = colour, scale = 0.32 }},
-      { n = G.UIT.T, config = { text = ')', colour = G.C.UI.TEXT_INACTIVE, scale = 0.32 }}
-    } or nil
-    
     return {
-      main_end = main_end,
       vars = {
+        colours = {
+          count >= card.ability.extra.hands and G.C.FILTER or G.C.UI.TEXT_INACTIVE
+        },
         card.ability.extra.Xmult,
-        card.ability.extra.hands
+        card.ability.extra.hands,
+        count >= card.ability.extra.hands and localize('rainydays_activated') or (card.ability.extra.hands - count) .. ' ' .. localize('rainydays_more')
       }
     }
   end,

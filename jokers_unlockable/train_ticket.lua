@@ -54,11 +54,12 @@ SMODS.Joker {
       end
       
       if check_for_three_row() then
-        card.ability.extra.current_mult = card.ability.extra.current_mult + card.ability.extra.mult_gain
-        return {
-          message = localize('k_upgrade_ex'),
-          colour = G.C.RED
-        }
+        SMODS.scale_card(card, {
+          ref_table = card.ability.extra,
+          ref_value = 'current_mult',
+          scalar_value = 'mult_gain',
+          scaling_message = { message = localize('k_upgrade_ex'), colour = G.C.MULT }
+        })
       end
     end
   end,

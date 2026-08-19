@@ -46,12 +46,12 @@ SMODS.Joker {
     
      if context.rd_draw_individual and G.GAME.facing_blind and not context.blueprint then
       if SMODS.has_enhancement(context.other_card, 'm_gold') then
-        card.ability.extra.x_mult = card.ability.extra.x_mult + card.ability.extra.plus_xmult
-        return {
-          message_card = card,
-          message = localize('k_upgrade_ex'),
-          colour = G.C.MULT
-        }
+        SMODS.scale_card(card, {
+          ref_table = card.ability.extra,
+          ref_value = 'x_mult',
+          scalar_value = 'plus_xmult',
+          scaling_message = { message = localize('k_upgrade_ex'), colour = G.C.MULT }
+        })
       end
     end
   end

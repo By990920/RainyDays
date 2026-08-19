@@ -42,19 +42,22 @@ SMODS.Joker {
       card.ability.extra.discarded_counter = card.ability.extra.discarded_counter + 1
       
       --enough clubs discarded
-      local upgraded = false
+      local upgraded = 0
       while card.ability.extra.discarded_counter >= card.ability.extra.per_discarded do
-        card.ability.extra.current_mult = card.ability.extra.current_mult + card.ability.extra.plus_mult
+        upgraded = upgraded + 1
         card.ability.extra.discarded_counter = card.ability.extra.discarded_counter - card.ability.extra.per_discarded
-        upgraded = true
       end
       
-      if upgraded then
-        return {
-          message_card = card,
-          message = localize('k_upgrade_ex'),
-          colour = G.C.MULT
-        }
+      if upgraded > 0 then
+        SMODS.scale_card(card, {
+          ref_table = card.ability.extra, 
+          ref_value = 'current_mult',
+          scalar_value = 'plus_mult',
+          operation = function(ref_table, ref_value, initial, modifier)
+            ref_table[ref_value] = initial + modifier * upgraded
+          end,
+          scaling_message = { message = localize('k_upgrade_ex'), message_card = card, colour = G.C.MULT }
+        })
       end
     end
   end

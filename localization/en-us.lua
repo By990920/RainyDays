@@ -87,7 +87,8 @@ return {
         text = {
           "This Joker gains {X:mult,C:white}X#1#{} Mult",
           "for each {C:attention}consecutive{} round",
-          "{C:attention}#2# consumable{} cards are used",
+          "where {C:attention}#2#{} or more {C:attention}consumable",
+          "cards are used",
           "{C:inactive}(Currently {X:mult,C:white}X#3#{C:inactive} Mult)",
           "{s:0.8,C:inactive}({s:0.8,C:attention}#4#{s:0.8,C:inactive}#5#)"
         }
@@ -110,8 +111,7 @@ return {
         text = {
           "{C:mult}+#1#{} Mult for every",
           "{C:attention}#2#{} cards with {C:clubs}Club",
-          "suit remaining in",
-          "{C:attention}deck",
+          "suit remaining in {C:attention}deck",
           "{C:inactive}(Currently {C:mult}+#3# {C:inactive}Mult)"
         },
         unlock = {
@@ -208,7 +208,7 @@ return {
         text = {
           "If played hand contains {C:attention}#1#{} or",
           "more {C:attention}face{} cards, destroy one",
-          "among them, and this Joker",
+          "of them, and this Joker",
           "gains {X:mult,C:white}X#2#{} Mult",
           "{C:inactive}(Currently {X:mult,C:white}X#3#{C:inactive} Mult)"
         }
@@ -253,7 +253,8 @@ return {
         text = {
           "{X:mult,C:white}X#1#{} Mult if {C:attention}#2#{} or more",
           "different {C:attention}poker hands",
-          "were {C:attention}discarded{} this run"
+          "were {C:attention}discarded{} this run",
+          "{C:inactive}({V:1}#3#{C:inactive})"
         }
       },
       
@@ -279,9 +280,8 @@ return {
       j_RainyDays_fan_mail = {
         name = "Fan Mail",
         text = {
-          "{C:attention}+#1#{} Pack Slot",
-          "available in",
-          "the shop"
+          "{C:attention}+#1#{} Pack available",
+          "in the shop"
         }
       },
       
@@ -432,8 +432,8 @@ return {
         text = {
           "When {C:attention}Blind{} is selected,",
           "create another {C:attention}Kudzu{}.",
-          "Then this Joker gains",
-          "{C:mult}+#1#{} Mult for each {C:attention}Kudzu",
+          "This Joker gains {C:mult}+#1#{} Mult",
+          "for each other {C:attention}Kudzu",
           "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)",
           "{C:inactive}(Must have room)"
         },
@@ -450,8 +450,7 @@ return {
           "When a {C:attention}#1#{} is drawn",
           "during a round, each",
           "card in the {C:attention}full deck",
-          "permanently gains",
-          "{C:chips}+#2#{} Chip"
+          "permanently gains {C:chips}+#2#{} Chip"
         },
         unlock = {
           "Have {E:1,C:attention}#1#{} or",
@@ -463,10 +462,10 @@ return {
       j_RainyDays_lady_of_the_lake = {
         name = "Lady of the Lake",
         text = {
-          "Each played hand,",
-          "a random {C:attention}unenhanced",
-          "{C:attention}scoring{} card gains",
-          "a random {C:attention}enhancement"
+          "Each played hand, a",
+          "random {C:attention}unenhanced",
+          "{C:attention}scoring{} card gains a",
+          "random {C:attention}enhancement"
         },
         unlock = {
           "Play a hand with",
@@ -730,7 +729,7 @@ return {
           "At end of round, set",
           "this Joker's base {C:attention}sell",
           "{C:attention}value{} between {C:money}$#1#{} and {C:money}$#2#{},",
-          "then increase max by {C:money}$#3#"
+          "then increase max by {C:money}$#3#",
         },
         unlock = {
           "Have Jokers with",
