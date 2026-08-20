@@ -296,7 +296,7 @@ return {
         name = "珍贵羽毛",
         text = {
           "回合结束时",
-          "每张{C:attention}羽毛{C:attention}小丑牌{}",
+          "每张{C:attention}羽毛小丑牌{}",
           "获得{C:money}$#1#"
         }
       },
@@ -333,7 +333,7 @@ return {
           "交替提供",
           "{C:chips}+#2#{}筹码或",
           "{X:mult,C:white}X#1#{}倍率",
-          "{C:inactive}(下次出牌: {X:mult,C:white}X#1#{C:inactive}筹码)"
+          "{C:inactive}(下次出牌: {X:mult,C:white}+#2#{C:inactive}筹码)"
         }
       },
 
