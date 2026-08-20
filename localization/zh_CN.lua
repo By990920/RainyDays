@@ -199,8 +199,8 @@ return {
       j_RainyDays_count_orlok = {
         name = "奥洛克伯爵",
         text = {
-          "如果出牌包含{C:attention}#1#{}张",
-          "或更多的{C:attention}人头牌{}",
+          "如果出牌包含至少",
+          "{C:attention}#1#{}张{C:attention}人头牌{}",
           "计分后随机摧毁其中一张",
           "这张小丑牌",
           "获得{X:mult,C:white}X#2#{}倍率",
@@ -333,7 +333,7 @@ return {
           "交替提供",
           "{C:chips}+#2#{}筹码或",
           "{X:mult,C:white}X#1#{}倍率",
-          "{C:inactive}(下次出牌: {X:mult,C:white}+#2#{C:inactive}筹码)"
+          "{C:inactive}(下次出牌: {C:chips}+#2#{C:inactive}筹码)"
         }
       },
 
@@ -404,7 +404,7 @@ return {
           "每张与{C:attention}奖励牌{}或",
           "{C:attention}倍率牌{}相邻的打出牌",
           "有{C:green}#1#/#2#{}几率获得",
-          "其{C:attention}增强效果{}"
+          "相同{C:attention}增强效果{}"
         }
       },
 
@@ -636,7 +636,7 @@ return {
         name = "质数",
         text = {
           "每张计分的",
-          "{C:attention}7{}、{C:attention}5{}、{C:attention}3{}或{C:attention}2{}变成",
+          "{C:attention}2{}、{C:attention}3{}、{C:attention}5{}或{C:attention}7{}变成",
           "{C:attention}万能牌{}"
         }
       },
@@ -654,7 +654,7 @@ return {
         name = "回收利用",
         text = {
           "每张弃掉的",
-          "{C:attention}5{}、{C:attention}4{}、{C:attention}3{}或{C:attention}2{}",
+          "{C:attention}2{}、{C:attention}3{}、{C:attention}4{}或{C:attention}5{}",
           "永久获得{C:mult}+#1#{}倍率",
           "并洗回牌组"
         }
@@ -770,7 +770,7 @@ return {
         text = {
           "本赛局每使用一张{C:planet}星球牌{}",
           "{C:chips}+#1#{}筹码",
-          "{C:inactive}(当前{C:chips}+#2#{C:inactive} 筹码)"
+          "{C:inactive}(当前{C:chips}+#2#{C:inactive}筹码)"
         },
         unlock = {
           "本赛局内使用{E:1,C:attention}#1#{}张",
@@ -796,8 +796,7 @@ return {
       j_RainyDays_throne = {
         name = "王座",
         text = {
-          "如果下一张将抽到的牌是",
-          "{C:attention}人头{}牌，",
+          "如果牌顶的牌是{C:attention}人头{}牌",
           "{X:mult,C:white}X#1#{}倍率",
           "{C:inactive}(当前{V:1}#2#{C:inactive})"
         }
@@ -820,7 +819,7 @@ return {
       j_RainyDays_truffle = {
         name = "松露",
         text = {
-          "{X:mult,C:white}X#1#{}倍率，",
+          "{X:mult,C:white}X#1#{}倍率",
           "回合结束时{C:attention}牌组{}中每",
           "{C:attention}剩余{}一张牌",
           "失去{X:mult,C:white}X#2#{}倍率"
@@ -907,8 +906,7 @@ return {
       rainydays_include_feathers = "包含羽毛小丑牌",
       rainydays_metallic_highlight_info1 = "纯视觉效果：部分小丑牌的贴图",
       rainydays_metallic_highlight_info2 = "带有金属质感的高光",
-      rainydays_more = "更多",
-      rainydays_more_cards = "张消耗牌",
+      rainydays_more_cards = "张",
       rainydays_more_dots = "张消耗牌..",
       rainydays_more_prefix = "还差",
       rainydays_more_types = "种",
