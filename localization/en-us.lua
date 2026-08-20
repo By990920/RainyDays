@@ -875,7 +875,7 @@ return {
           "Create {C:attention}#3# {C:planet}Planet{} cards",
           "every {C:attention}#1#{} {C:inactive}[#2#]{} cards with",
           "{C:diamonds}Diamond{} suit drawn",
-          "during a round",
+          "during any round",
           "{C:inactive}(Must have room)"
         }
       },
