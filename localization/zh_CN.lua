@@ -1,5 +1,16 @@
 return {
   descriptions = {
+    Mod = {
+      rainydays = {
+        name = "雨天",
+        text = {
+          "含75张原版风格的小丑牌, 与原版Balatro相得益彰。",
+          "每张小丑牌的描述都遵循游戏简洁的风格,",
+          "在带来新鲜组合的同时不喧宾夺主,与原有卡池保持平衡。",
+        }
+      }
+    },
+
     Joker = {
       j_RainyDays_absent_heart = {
         name = "缺心",
@@ -848,8 +859,8 @@ return {
       j_RainyDays_windowsill = {
         name = "窗台",
         text = {
-          "回合内每抽到{C:attention}#1#",
-          "{C:inactive}[#2#]{}张{C:diamonds}方块{}花色牌",
+          "每抽到{C:attention}#1#{}{C:inactive}[#2#]{}张",
+          "{C:diamonds}方块{}花色牌",
           "生成{C:attention}#3#{}张{C:planet}星球牌{}",
           "{C:inactive}(必须有空位)"
         }
