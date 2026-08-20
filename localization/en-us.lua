@@ -90,7 +90,7 @@ return {
           "where {C:attention}#2#{} or more {C:attention}consumable",
           "cards are used",
           "{C:inactive}(Currently {X:mult,C:white}X#3#{C:inactive} Mult)",
-          "{s:0.8,C:inactive}({s:0.8,C:attention}#4#{s:0.8,C:inactive}#5#)"
+          "{s:0.8,C:inactive}({s:0.8,C:inactive}#5#)"
         }
       },
       
@@ -913,7 +913,7 @@ return {
       rainydays_active = "active",
       rainydays_active_cap = "Active",
       rainydays_beanstalk_grown = "Already grown this round",
-      rainydays_beanstalk_or_will_reset = "or reset at end of round",
+      rainydays_beanstalk_or_will_reset = " or reset at end of round",
       rainydays_charm_tag = "Charm Tag",
       rainydays_constellation = "Constellation",
       rainydays_copied_before = "Copied Before",
@@ -934,8 +934,10 @@ return {
       rainydays_include_feathers = "Include Feather Jokers",
       rainydays_metallic_highlight_info1 = "As a purely visual effect, some Jokers have",
       rainydays_metallic_highlight_info2 = "metallic hightlights in their sprites",
-      rainydays_more = "more",
+      rainydays_more_cards = " more",
       rainydays_more_dots = "more..",
+      rainydays_more_prefix = "",
+      rainydays_more_types = " more",
       rainydays_must_play_hand_with_5_scoring_cards = "Must play hand with 5 scoring cards",
       rainydays_new_rank = "New Rank!",
       rainydays_plus = "+",

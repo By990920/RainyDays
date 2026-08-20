@@ -36,7 +36,7 @@ SMODS.Joker {
         },
         card.ability.extra.Xmult,
         card.ability.extra.hands,
-        count >= card.ability.extra.hands and localize('rainydays_activated') or (card.ability.extra.hands - count) .. ' ' .. localize('rainydays_more')
+        count >= card.ability.extra.hands and localize('rainydays_activated') or localize('rainydays_more_prefix') .. (card.ability.extra.hands - count) .. localize('rainydays_more_types')
       }
     }
   end,

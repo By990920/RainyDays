@@ -26,9 +26,9 @@ SMODS.Joker {
     if amount <= 0 then
       string = localize('rainydays_beanstalk_grown')
     else
-      string = ' ' .. localize('rainydays_more')
+      string = localize('rainydays_more_prefix') .. amount .. localize('rainydays_more_cards')
       if card.ability.extra.xmult ~= card.ability.extra.xmult_start then
-        string = string .. ' ' .. localize('rainydays_beanstalk_or_will_reset')
+        string = string .. localize('rainydays_beanstalk_or_will_reset')
       end
     end
   
