@@ -517,7 +517,7 @@ return {
       j_RainyDays_lotteryticket_long = {
         name = "彩票",
         text = {
-          "本回合第一张打出的",
+          "每回合第一张打出的",
           "{C:attention}#1#{}、{C:attention}#2#{}、{C:attention}#3#{}、{C:attention}#4#{}和{C:attention}#5#{}",
           "在计分时获得{C:money}$#6#{}",
           "{s:0.8}每个回合点数都会变{}"
