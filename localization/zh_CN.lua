@@ -25,8 +25,9 @@ return {
       j_RainyDays_accountant = {
         name = "会计师",
         text = {
-          "本回合每{C:attention}抽{}一张牌",
+          "回合内每抽一张牌",
           "获得{C:mult}+#1#{}倍率",
+          "{C:attention}回合{}结束时重置倍率",
           "{C:inactive}(当前{C:mult}+#2#{C:inactive}倍率)"
         },
         unlock = {
@@ -72,9 +73,8 @@ return {
         name = "银行账户",
         text = {
           "{C:chips}+#1#{}筹码",
-          "获得{C:attention}利息{}时",
-          "将{C:attention}利息{}添加到",
-          "这张小丑牌的{C:attention}售价{}上"
+          "获得{C:attention}利息{}时，改为等额",
+          "添加到这张小丑牌的{C:attention}售价{}上",
         }
       },
 
@@ -167,9 +167,9 @@ return {
         name = "清单",
         text = {
           "本回合中每张打出的牌",
-          "若其{C:attention}点数{}已打出过",
-          "则其在计分时给予",
-          "{X:mult,C:white}X#1#{}倍率"
+          "若此前的出牌中",
+          "打出过其{C:attention}点数{}",
+          "则在计分时给予{X:mult,C:white}X#1#{}倍率"
         }
       },
 
@@ -348,8 +348,8 @@ return {
       j_RainyDays_golden_idol = {
         name = "黄金偶像",
         text = {
-          "出牌后抽到{C:attention}黄金牌{}时",
-          "这张小丑牌",
+          "回合内每抽到一张",
+          "{C:attention}黄金牌{}，这张小丑牌",
           "获得{X:mult,C:white}X#1#{}倍率",
           "{C:inactive}(当前{X:mult,C:white}X#2#{C:inactive}倍率)"
         }
@@ -407,8 +407,8 @@ return {
       j_RainyDays_heirloom = {
         name = "传家宝",
         text = {
-          "打出的与{C:attention}奖励牌{}或",
-          "{C:attention}倍率牌{}相邻的牌",
+          "每张打出的与{C:attention}奖励牌{}",
+          "或{C:attention}倍率牌{}相邻的牌",
           "有{C:green}#1#/#2#{}几率获得",
           "相同{C:attention}增强效果{}"
         }
@@ -447,7 +447,7 @@ return {
       j_RainyDays_lady_in_waiting = {
         name = "侍女",
         text = {
-          "出牌后每抽到一张{C:attention}#1#{}",
+          "回合内每抽到一张{C:attention}#1#{}",
           "{C:attention}完整牌组{}中的每张牌",
           "永久获得{C:chips}+#2#{}筹码"
         },
@@ -460,10 +460,10 @@ return {
       j_RainyDays_lady_of_the_lake = {
         name = "湖中夫人",
         text = {
-          "每次出牌时",
-          "一张随机的",
-          "{C:attention}未增强{}的{C:attention}计分{}卡牌",
-          "获得随机{C:attention}增强效果{}"
+          "每次出牌时一张",
+          "随机的{C:attention}已增强{}的",
+          "{C:attention}计分{}卡牌重置",
+          "为随机{C:attention}增强效果{}"
         },
         unlock = {
           "打出包含{E:1,C:attention}#1#{}种",
@@ -592,9 +592,9 @@ return {
       j_RainyDays_parrot = {
         name = "鹦鹉",
         text = {
-          "复制右侧{C:attention}小丑牌{}的",
-          "能力，每{C:attention}底注{}最多",
-          "复制一次"
+          "复制{C:attention}右侧{}小丑牌的",
+          "能力，若其在本{C:attention}底注{}",
+          "此前的回合未被复制过"
         }
       },
 
@@ -811,8 +811,8 @@ return {
       j_RainyDays_train_ticket = {
         name = "火车票",
         text = {
-          "如果出牌中包含{C:attention}#2#{}张",
-          "或更多{C:attention}连续{}点数的牌",
+          "如果打出的牌中包含",
+          "{C:attention}#2#{}张或更多{C:attention}连续{}点数的牌",
           "这张小丑获得{C:mult}+#1#{}倍率",
           "{C:inactive}(当前{C:mult}+#3#{C:inactive}倍率)"
         },
@@ -854,7 +854,7 @@ return {
       j_RainyDays_windowsill = {
         name = "窗台",
         text = {
-          "出牌后每累计抽到",
+          "回合内每累计抽到",
           "{C:attention}#1#{}{C:inactive}[#2#]{}张{C:diamonds}方块{}花色牌",
           "生成{C:attention}#3#{}张{C:planet}星球牌{}",
           "{C:inactive}(必须有空位)"
@@ -868,7 +868,7 @@ return {
           "售出此牌以生成",
           "{C:tarot}#2#",
           "{C:tarot}#3#",
-          "每回合{C:tarot}塔罗牌{}都会改变",
+          "每个回合{C:tarot}塔罗牌{}都会改变",
           "{C:inactive}(必须有空位)"
         }
       },
@@ -878,7 +878,7 @@ return {
         text = {
           "{C:chips}+#1#{}筹码",
           "售出此牌以生成{C:tarot}#2#",
-          "每回合{C:tarot}塔罗牌{}都会改变",
+          "每个回合{C:tarot}塔罗牌{}都会改变",
           "{C:inactive}(必须有空位)"
         }
       }
