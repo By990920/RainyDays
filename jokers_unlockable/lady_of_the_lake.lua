@@ -17,7 +17,7 @@ SMODS.Joker {
     if context.before and context.main_eval then
       local choices = {}
       for i = 1, #context.scoring_hand do 
-        if not context.scoring_hand[i].ladylaked and context.scoring_hand[i].config.center.key ~= 'c_base' and not context.scoring_hand[i].debuff then
+        if not context.scoring_hand[i].ladylaked and context.scoring_hand[i].config.center.key == 'c_base' and not context.scoring_hand[i].debuff then
           choices[#choices + 1] = context.scoring_hand[i]
         end
       end

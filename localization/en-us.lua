@@ -164,9 +164,9 @@ return {
         name = "Checklist",
         text = {
           "Each played {C:attention}card{} with a",
-          "{C:attention}rank{} already played this",
-          "round gives {X:mult,C:white}X#1#{} Mult",
-          "when scored"
+          "{C:attention}rank{} played in a {C:attention}previous",
+          "hand this round gives",
+          "{X:mult,C:white}X#1#{} Mult when scored"
         }
       },
       
