@@ -461,9 +461,9 @@ return {
         name = "湖中夫人",
         text = {
           "每次出牌时一张",
-          "随机的{C:attention}已增强{}的",
-          "{C:attention}计分{}卡牌重置",
-          "为随机{C:attention}增强效果{}"
+          "随机的{C:attention}未增强{}的",
+          "{C:attention}计分{}卡牌获得",
+          "随机{C:attention}增强效果{}"
         },
         unlock = {
           "打出包含{E:1,C:attention}#1#{}种",
